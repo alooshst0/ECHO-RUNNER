@@ -965,7 +965,7 @@ class Game {
     for(let i=0;i<4;i++){
       ctx.save();
       const alpha = 0.04 + i*0.02;
-      ctx.fillStyle = rgba(0,255,240,${0.02 + (i*0.01)});
+      ctx.fillStyle = rgba(0,255,240,${0.02 + (i*0.01)};
       const y = (this.height * (0.1 + i*0.25)) + Math.sin(perfNow()*0.002 + i)*22;
       ctx.globalAlpha = alpha;
       ctx.fillRect(0, y, this.width, 8);
@@ -1283,3 +1283,4 @@ window.__ECHO = { game, audio, settings, stats, Storage };
 </script>
 </body>
 </html>
+
