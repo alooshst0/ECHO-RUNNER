@@ -388,6 +388,7 @@ html, body {
     background: rgba(0,255,240,0.5);
 }
 </style>
+   <link rel="icon" href="data:,"/> 
 </head>
 <body>
 <div class="app" role="application" aria-label="ECHO RUNNER game">
@@ -1400,7 +1401,7 @@ class Game {
         for (let i = 0; i < 4; i++) {
             ctx.save();
             const alpha = 0.04 + i * 0.02;
-            ctx.fillStyle = rgba(0,255,240,${0.02 + (i * 0.01)});
+            ctx.fillStyle = 'rgba(0,255,240,${0.02 + (i * 0.01)})';
             const y = (this.height * (0.1 + i * 0.25)) + Math.sin(Date.now() * 0.002 + i) * 22;
             ctx.globalAlpha = alpha;
             ctx.fillRect(0, y, this.width, 8);
@@ -1731,8 +1732,8 @@ function updateCooldownUI(cdDash, cdShield, player) {
     const dashRatio = clamp(cdDash / dashMax, 0, 1);
     const shieldRatio = clamp(cdShield / shieldMax, 0, 1);
     
-    UI.cdDash.style.transform = scaleY(${dashRatio});
-    UI.cdShield.style.transform = scaleY(${shieldRatio});
+    UI.cdDash.style.transform = 'scaleY(${dashRatio})';
+    UI.cdShield.style.transform = 'scaleY(${shieldRatio})';
 }
 
 function refreshLeaderboard() {
@@ -1808,5 +1809,6 @@ window.__ECHO = { game, audio, settings, stats, Storage };
 </script>
 </body>
 </html>
+
 
 
