@@ -1750,7 +1750,7 @@ function refreshLeaderboard() {
     
     for (const item of lb) {
         const li = document.createElement('li');
-        li.innerHTML = <span>${new Date(item.when).toLocaleDateString()}'</span><strong>${item.score}</strong>';
+        li.innerHTML = '<span>${new Date(item.when).toLocaleDateString()}</span><strong>${item.score}</strong>';
         UI.leaderList.appendChild(li);
     }
 }
@@ -1809,6 +1809,7 @@ window.__ECHO = { game, audio, settings, stats, Storage };
 </script>
 </body>
 </html>
+
 
 
 
